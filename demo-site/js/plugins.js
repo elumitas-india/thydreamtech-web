@@ -41,9 +41,10 @@ $(document).ready(function(){
       autoplay: true,
       autoplayHoverPause: false,
       loop: true,
+      lazyLoad: true,
       autoplayTimeout: 8000,
-      smartSpeed: 1200,
-      dotsSpeed: 1000,
+      smartSpeed: 800,
+      dotsSpeed: 700,
       responsive : {
           0 : {
               items: 2

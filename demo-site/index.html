@@ -16,7 +16,6 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
@@ -30,7 +29,7 @@
         <div class="container-fluid">
           <a href="#home" class="navbar-brand">ThyDream Tech</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-            <span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
+            <span class="custom-toggler-icon"><svg class="svg-inline--fa fa-bars fa-w-14" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -105,25 +104,15 @@
         </div>
       </div>
 
-      <div class="row galley py-0">
-        <div id="team-carousel" class="owl-carousel owl-theme">
-          <div>
-            <img src="images/office2.jpg" alt="thydreamtech office">
-          </div>
-
-          <div>
-            <img src="images/office3.jpg" alt="thydreamtech office">
-          </div>
-
-          <div>
-            <img src="images/office4.jpg" alt="thydreamtech office">
-          </div>
-
-          <div>
-            <img src="images/office5.jpg" alt="thydreamtech office">
-          </div>
-        </div>
+      <div class="owl-carousel owl-theme" id="team-carousel">
+        <img class="owl-lazy" data-src="https://placehold.it/350x250&text=4" alt="">
+        <img class="owl-lazy" data-src="https://placehold.it/350x250&text=5" alt="">
+        <img class="owl-lazy" data-src="https://placehold.it/350x250&text=6" alt="">
+        <img class="owl-lazy" data-src="https://placehold.it/350x250&text=7" alt="">
+        <img class="owl-lazy" data-src="https://placehold.it/350x250&text=8" alt="">
       </div>
+
+
     </section>
 
     <!-- Team section -->
@@ -137,7 +126,7 @@
         <div class="row">
           <div class="col-md-4">
             <div class="team">
-              <img src="http://purefive.thememeister.com/img/team/1.jpg">
+              <img src="./images/team.png">
 
               <h3 class="font-weight-bold">
                 Manoj Kumar
@@ -151,7 +140,7 @@
 
           <div class="col-md-4">
             <div class="team">
-              <img src="http://purefive.thememeister.com/img/team/1.jpg">
+              <img src="./images/team.png">
               <h3 class="font-weight-bold">
                 Manoj Kumar
                 <small class="font-weight-normal">
@@ -163,7 +152,7 @@
 
           <div class="col-md-4">
             <div class="team">
-              <img src="http://purefive.thememeister.com/img/team/1.jpg">
+              <img src="./images/team.png">
               <h3 class="font-weight-bold">
                 Manoj Kumar
                 <small class="font-weight-normal">
@@ -175,7 +164,7 @@
 
           <div class="col-md-4">
             <div class="team">
-              <img src="http://purefive.thememeister.com/img/team/1.jpg">
+              <img src="./images/team.png">
 
               <h3 class="font-weight-bold">
                 Manoj Kumar
@@ -189,7 +178,7 @@
 
           <div class="col-md-4">
             <div class="team">
-              <img src="http://purefive.thememeister.com/img/team/1.jpg">
+              <img src="./images/team.png">
               <h3 class="font-weight-bold">
                 Manoj Kumar
                 <small class="font-weight-normal">
@@ -201,7 +190,7 @@
 
           <div class="col-md-4">
             <div class="team">
-              <img src="http://purefive.thememeister.com/img/team/1.jpg">
+              <img src="./images/team.png">
               <h3 class="font-weight-bold">
                 Manoj Kumar
                 <small class="font-weight-normal">
@@ -299,7 +288,6 @@
 
 
     <script src="js/plugins.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.11.2/js/all.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
