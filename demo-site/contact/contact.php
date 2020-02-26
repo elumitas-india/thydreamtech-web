@@ -3,14 +3,14 @@
     $visitor_email = $_POST['email'];
     $message = $_POST['message'];
 
-    $email_form = 'senthil.murugan@thydreamtech.com';
+    $email_form = 'senthilmurugan.gl@gmail.com';
     $email_subject = "Contcat Form";
 
     $email_body = "User Name: $name.\n".
                     "User Email: $visitor_email.\n".
                         "User Message: $message.\n";
 
-    $to = "senthil.murugan@thydreamtech.com";
+    $to = "senthilmurugan.gl@gmail.com";
     $headers = "From : $email_form \r\n";
     $headers = "Reply-To : $visitor_email \r\n";
 
