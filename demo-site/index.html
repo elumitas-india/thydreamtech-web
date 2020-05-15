@@ -229,26 +229,26 @@
           </div>
 
           <div class="col-md-7">
-            <form id="contact-form" method="post" action="contact/contact.php" role="form">
+            <form id="contact-form" action="">
               <div class="messages"></div>
               <div class="d-flex flex-wrap">
                 <div class="col-md-6 pl-0 col-sm-12">
                   <div class="form-group">
-                  <input id="form_name" type="text" name="name" class="form-control"
+                  <input id="name" type="text" name="name" class="form-control"
                     placeholder="Please enter your name *" required="required"
                     data-error="Name is required."/>
                   <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
-                  <input id="form_email" type="email" name="email" class="form-control"
+                  <input id="email" type="email" name="email" class="form-control"
                     placeholder="Please enter your email *" required="required"
                     data-error="Valid email is required."/>
                   <div class="help-block with-errors"></div>
                   </div>
 
                   <div class="form-group">
-                  <input id="form_subject" type="text" name="need" class="form-control"
+                  <input id="subject" type="text" name="need" class="form-control"
                     placeholder="Please specify your need. *" required="required"
                     data-error="Please specify your need." />
                   <div class="help-block with-errors"></div>
@@ -257,12 +257,13 @@
 
                 <div class="col-md-6 pr-0 col-sm-12">
                   <div class="form-group">
-                    <textarea id="form_message" name="message" class="form-control"
+                    <textarea id="message" name="message" class="form-control"
                       placeholder="Message for me *" rows="4" required="required"
                       data-error="Please, leave us a message."></textarea>
                     <div class="help-block with-errors"></div>
                   </div>
-                  <input type="submit" class="btn btn-dark rounded-0 mt-3" value="Send message">
+                  <input type="submit" class="btn btn-dark rounded-0 mt-3" id="submit" value="Send message">
+                  <label id="info"></label>
                 </div>
               </div>
             </form>
@@ -291,6 +292,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+    <script src="contact/contact.js"></script>
 
     <script type="text/javascript">
       // Initialize and add the map

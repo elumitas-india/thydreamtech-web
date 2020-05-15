@@ -1,45 +1,56 @@
-$(function () {
+$(document).ready(function() {
 
-    // init the validator
-    // validator files are included in the download package
-    // otherwise download from http://1000hz.github.io/bootstrap-validator
+  var form = $('#contact-form'),
+      email = $('#email'),
+      subject = $('#subject'),
+      message = $('#message'),
+      info = $('#info'),
+      submit = $("#submit");
 
-    $('#contact-form').validator();
+  form.on('input', '#email, #subject, #message', function() {
+    $(this).css('border-color', '');
+    info.html('').slideUp();
+  });
 
-
-    // when the form is submitted
-    $('#contact-form').on('submit', function (e) {
-
-        // if the validator does not prevent form submit
-        if (!e.isDefaultPrevented()) {
-            var url = "contact.php";
-
-            // POST values in the background the the script URL
-            $.ajax({
-                type: "POST",
-                url: url,
-                data: $(this).serialize(),
-                success: function (data)
-                {
-                    // data = JSON object that contact.php returns
-
-                    // we recieve the type of the message: success x danger and apply it to the 
-                    var messageAlert = 'alert-' + data.type;
-                    var messageText = data.message;
-
-                    // let's compose Bootstrap alert box HTML
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                    
-                    // If we have messageAlert and messageText
-                    if (messageAlert && messageText) {
-                        // inject the alert to .messages div in our form
-                        $('#contact-form').find('.messages').html(alertBox);
-                        // empty the form
-                        $('#contact-form')[0].reset();
-                    }
-                }
-            });
-            return false;
+  submit.on('click', function(e) {
+    e.preventDefault();
+    if(validate()) {
+      $.ajax({
+        type: "POST",
+        url: "mailer.php",
+        data: form.serialize(),
+        dataType: "json"
+      }).done(function(data) {
+        if(data.success) {
+          email.val('');
+          subject.val('');
+          message.val('');
+          info.html('Message sent!').css('color', 'green').slideDown();
+        } else {
+          info.html('Could not send mail! Sorry!').css('color', 'red').slideDown();
         }
-    })
+      });
+    }
+  });
+
+  function validate() {
+    var valid = true;
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if(!regex.test(email.val())) {
+      email.css('border-color', 'red');
+      valid = false;
+    }
+    if($.trim(subject.val()) === "") {
+      subject.css('border-color', 'red');
+      valid = false;
+    }
+    if($.trim(message.val()) === "") {
+      message.css('border-color', 'red');
+      valid = false;
+    }
+
+    return valid;
+  }
+
 });
