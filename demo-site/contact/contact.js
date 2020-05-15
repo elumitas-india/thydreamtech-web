@@ -1,13 +1,14 @@
 $(document).ready(function() {
 
-  var form = $('#contact-form'),
+  var form = $('#form'),
+      email = $('#name'),
       email = $('#email'),
       subject = $('#subject'),
       message = $('#message'),
       info = $('#info'),
       submit = $("#submit");
 
-  form.on('input', '#email, #subject, #message', function() {
+  form.on('input', '#name, #email, #subject, #message', function() {
     $(this).css('border-color', '');
     info.html('').slideUp();
   });
@@ -37,6 +38,10 @@ $(document).ready(function() {
     var valid = true;
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
+    if(!regex.test(name.val())) {
+      name.css('border-color', 'red');
+      valid = false;
+    }
     if(!regex.test(email.val())) {
       email.css('border-color', 'red');
       valid = false;
