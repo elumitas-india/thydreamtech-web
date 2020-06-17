@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+@mixin position($position: absolute, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Poppins", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$white:   #ffffff;
+$black:   #000000;
+
+html {
+  padding: env(safe-area-inset);
+}
+
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  font-family: $font-family-sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $black;
+  color: $white;
+}
+
+/*============= Basic page style =============*/
+
+/*-- Remove Button Outline --*/
+button:focus,
+a:focus,
+a.btn:focus {
+ -webkit-appearance: none;
+ box-shadow: none;
+ outline: 0;
+ transition: all .6s ease;
+}
+
+/*-- Section --*/
+section {
+  padding: 200px 0;
+  position: relative;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+/* CUSTOM CONTAINER */
+@media (min-width: 1170px) {
+  .container { max-width: 1100px; }
+}
+
+@media (min-width: 1280px) {
+  .container { max-width: 1260px; }
+}
+
+/*--- Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+ margin-bottom: 20px;
+}
+
+h1 {
+  &::after {
+    @include position (absolute, 100%, 0, null, 0);
+    background-color: $white;
+    content: '';
+    height: 2px;
+    margin: 10px auto;
+    width: 5%;
+  }
+
+  small {
+    display: block;
+    font-size: 30%;
+    font-weight: 400;
+    letter-spacing: 3px;
+  }
+}
+
+h2 {
+  font-weight: 600;
+  @media (max-width: 767.98px) {
+    font-size: 1.5rem;
+  }
+}
+
+/*============= NAVIGATION =============*/
+
+.navbar {
+  font-weight: 700;
+  letter-spacing: .1rem;
+  padding: .7rem 1rem;
+  text-transform: uppercase;
+  transition: background-color .5s ease;
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+  .navbar-brand img {
+    width: 90px;
+  }
+
+  .navbar-nav .nav-item {
+   padding-right: .8rem;
+   .nav-link {
+    padding-top: .8rem;
+  }
+}
+
+.custom-toggler-icon {
+ font-size: 1.6rem;
+}
+
+&.solid,
+&.solid-toggle {
+ background: rgba(0, 0, 0, .9)!important;
+ transition: background-color 1s ease;
+}
+&.solid .navbar-brand {
+  transition: all 1s ease;
+  img { display: none; }
+
+  .logo-text {
+    display: block;
+
+  }
+}
+
+.logo-text {
+  display: none;
+}
+}
+
+/*============= LANDING PAGE =============*/
+
+/*--- Fixed Landing Page Section --*/
+.landing {
+  display: table;
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  z-index: -1;
+
+  .home-wrap {
+    @include position(absolute, 0, null, null, 0);
+    clip: rect(0, auto, auto, 0);
+    height: 100%;
+    width: 100%;
+  }
+
+  .home-inner {
+    -webkit-transform: translateZ(0);
+    background-image: url('../images/pattern-bg.png');
+    background-position: center center;
+    background-size: cover;
+    display: table;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0);
+    width: 100%;
+    will-change: transform;
+  }
+}
+
+.caption {
+  @include position(absolute, 38%, null, null, null,);
+  max-width: 100%;
+  width: 100%;
+  z-index: 1;
+
+  @media (max-width: 575.98px) {
+    top: 28%;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+
+    @media (max-width: 991.98px) {
+      font-size: 3.5rem;
+      letter-spacing: .2rem;
+      padding-bottom: .8rem;
+    }
+
+    @media (max-width: 767.98px) {
+      font-size: 2.5rem;
+      letter-spacing: .1rem;
+      padding-bottom: .4rem;
+    }
+
+    @media (max-width: 575.98px) {
+      font-size: 1.9rem;
+      letter-spacing: .1rem;
+      padding-bottom: .4rem;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  p {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    padding-bottom: 2rem;
+
+    @media (max-width: 767.98px) {
+      font-size: 1rem;
+      letter-spacing: 0px;
+    }
+
+    @media (max-width: 575.98px) {
+      font-size: 1rem;
+      letter-spacing: 0px;
+    }
+  }
+}
+
+/*-- Soft logo --*/
+.soft-logo {
+  li {
+    &:not(:last-child) {
+      margin-right: 5rem;
+    }
+
+    .icons {
+      font-size: 65px;
+    }
+
+    sapn {
+      font-size: 15px;
+    }
+  }
+}
+
+/*-- Gallery --*/
+.galley {
+  padding: 0;
+
+  img {
+    max-width: 100%;
+    filter: gray; /* IE5+ */
+    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+    -webkit-transition: filter 0.9s ease;
+    -moz-transition: filter 0.9s ease;
+    -ms-transition: filter 0.9s ease;
+    -o-transition: filter 0.9s ease;
+    transition: filter 0.9s ease;
+
+    &:hover {
+      filter: none;
+      -webkit-filter: grayscale(0);
+    }
+  }
+}
+
+/* Team */
+.team {
+  h3 small {
+    display: block;
+    font-size: 50%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+}
+
+/*============= CONTACT =============*/
+
+.footer {
+  padding: 200px 0 50px;
+
+  .form-control {
+    background: transparent;
+    border: 1px solid #3a3a3a;
+    font-size: 14px;
+    border-radius: 0;
+  }
+
+  #info {
+    @include position(absolute, null, null, 15px, 170px);
+    font-size: 20px;
+  }
+
+  #map {
+    background-color: $black;
+    height: 500px;
+    width: 100%;
+  }
+
+  .contact-info {
+    h5 {
+      color: #888787;
+
+      &::after {
+        @include position(absolute, 30px, null, 0, 0);
+        content: '';
+        width: 40px;
+        height: 1px;
+        background-color: #888787;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .pr-0 { padding-right: 0; }
+    .pl-0 { padding-left: 0; }
+    #map { height: 350px; }
+  }
+
+  @media (max-width: 575.98px) {
+    .pr-0 {
+      padding-right: 0;
+    }
+
+    #map {
+      height: 300px;
+    }
+  }
+
+  .map {
+    position: relative;
+    width: 100%;
+    height: 400px;
+
+    &:hover {
+      .map-overlay {
+        background: rgba($black, .1);
+      }
+    }
+
+    .map-overlay {
+      @include position(absolute, 0, 0, 0, 0);
+      background: rgba($black, .5);
+      transition: 0.3s;
+      pointer-events: none;
+    }
+  }
+}
+
+/*============= COPYRIGHT =============*/
+
+.copyright {
+  border-top: 1px solid #3a3a3a;
+  padding: 10px 0;
+
+  .list-inline .list-inline-item a {
+    color: $white;
+    &:hover {
+      color: gray;
+      text-decoration: none;
+    }
+  }
+}

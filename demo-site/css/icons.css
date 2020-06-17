@@ -1,0 +1,158 @@
+@font-face {
+  font-family: 'thydream-icon';
+  src:  url('../fonts/thydream-icon.eot?91mrpj');
+  src:  url('../fonts/thydream-icon.eot?91mrpj#iefix') format('embedded-opentype'),
+    url('../fonts/thydream-icon.ttf?91mrpj') format('truetype'),
+    url('../fonts/thydream-icon.woff?91mrpj') format('woff'),
+    url('../fonts/thydream-icon.svg?91mrpj#thydream-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icons-"], [class*=" icons-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'thydream-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icons-Postgresql:before {
+  content: "\e900";
+}
+.icons-activemq:before {
+  content: "\e901";
+}
+.icons-angular:before {
+  content: "\e902";
+}
+.icons-aws:before {
+  content: "\e903";
+}
+.icons-bootstrap:before {
+  content: "\e904";
+}
+.icons-bower:before {
+  content: "\e905";
+}
+.icons-chaijs:before {
+  content: "\e906";
+}
+.icons-coffeescript:before {
+  content: "\e907";
+}
+.icons-css3:before {
+  content: "\e908";
+}
+.icons-d3:before {
+  content: "\e909";
+}
+.icons-digitalocean:before {
+  content: "\e90a";
+}
+.icons-dropbox:before {
+  content: "\e90b";
+}
+.icons-es6:before {
+  content: "\e90c";
+}
+.icons-git:before {
+  content: "\e90d";
+}
+.icons-github:before {
+  content: "\e90e";
+}
+.icons-grunt:before {
+  content: "\e90f";
+}
+.icons-html5:before {
+  content: "\e910";
+}
+.icons-invision:before {
+  content: "\e911";
+}
+.icons-ionic:before {
+  content: "\e912";
+}
+.icons-java:before {
+  content: "\e913";
+}
+.icons-javascript:before {
+  content: "\e914";
+}
+.icons-jenkins:before {
+  content: "\e915";
+}
+.icons-jira:before {
+  content: "\e916";
+}
+.icons-linode:before {
+  content: "\e917";
+}
+.icons-lodash:before {
+  content: "\e918";
+}
+.icons-mapbox:before {
+  content: "\e919";
+}
+.icons-mocha:before {
+  content: "\e91a";
+}
+.icons-mongodb:before {
+  content: "\e91b";
+}
+.icons-nginx:before {
+  content: "\e91c";
+}
+.icons-nodejs:before {
+  content: "\e91d";
+}
+.icons-plotly:before {
+  content: "\e91e";
+}
+.icons-pm2:before {
+  content: "\e91f";
+}
+.icons-python:before {
+  content: "\e920";
+}
+.icons-rails:before {
+  content: "\e921";
+}
+.icons-react:before {
+  content: "\e922";
+}
+.icons-redis:before {
+  content: "\e923";
+}
+.icons-rspec:before {
+  content: "\e924";
+}
+.icons-ruby:before {
+  content: "\e925";
+}
+.icons-sass:before {
+  content: "\e926";
+}
+.icons-sentry:before {
+  content: "\e927";
+}
+.icons-slack:before {
+  content: "\e928";
+}
+.icons-trello:before {
+  content: "\e929";
+}
+.icons-typescript:before {
+  content: "\e92a";
+}
+.icons-unicorn:before {
+  content: "\e92b";
+}

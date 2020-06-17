@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var form = $('#form'),
-      email = $('#name'),
+      name = $('#name'),
       email = $('#email'),
       subject = $('#subject'),
       message = $('#message'),
@@ -18,17 +18,18 @@ $(document).ready(function() {
     if(validate()) {
       $.ajax({
         type: "POST",
-        url: "mailer.php",
+        url: "contact/mailer.php",
         data: form.serialize(),
         dataType: "json"
       }).done(function(data) {
         if(data.success) {
+          name.val('');
           email.val('');
           subject.val('');
           message.val('');
-          info.html('Message sent!').css('color', 'green').slideDown();
+          info.html('Message sent!').css('color', 'green').fadeIn(1000).fadeOut('slow');
         } else {
-          info.html('Could not send mail! Sorry!').css('color', 'red').slideDown();
+          info.html('Could not send mail! Sorry!').css('color', 'red').fadeIn(1000).fadeOut('slow');
         }
       });
     }
@@ -38,11 +39,11 @@ $(document).ready(function() {
     var valid = true;
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-    if(!regex.test(name.val())) {
+    if(name.val() === '') {
       name.css('border-color', 'red');
       valid = false;
     }
-    if(!regex.test(email.val())) {
+    if($.trim(email.val()) === "") {
       email.css('border-color', 'red');
       valid = false;
     }
