@@ -190,11 +190,32 @@ h2 {
       -webkit-filter: grayscale(0); }
 
 /* Team */
-.team h3 small {
-  display: block;
-  font-size: 50%;
-  margin-bottom: 15px;
-  margin-top: 5px; }
+.team {
+  padding: 1rem;
+  transition: all .7s ease; }
+  .team h4 {
+    transition: all .9s ease; }
+    .team h4 small {
+      display: block;
+      font-size: 50%;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+      margin-top: 5px; }
+  .team img {
+    -webkit-filter: grayscale(1);
+    /* Webkit Nightlies & Chrome Canary */
+    -webkit-transition: filter 0.9s ease;
+    -moz-transition: filter 0.9s ease;
+    -ms-transition: filter 0.9s ease;
+    -o-transition: filter 0.9s ease;
+    transition: filter 0.9s ease; }
+  .team:hover {
+    background-color: #fff; }
+    .team:hover img {
+      filter: none;
+      -webkit-filter: grayscale(0); }
+    .team:hover h4 {
+      color: #000000; }
 
 /*============= CONTACT =============*/
 .footer {
