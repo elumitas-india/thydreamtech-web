@@ -167,32 +167,13 @@ h5 {
 /*============= LANDING PAGE =============*/
 
 /*--- Fixed Landing Page Section --*/
+
 .landing {
   display: table;
   height: 100vh;
   position: relative;
   width: 100%;
   z-index: -1;
-
-  .home-wrap {
-    @include position(absolute, 0, null, null, 0);
-    clip: rect(0, auto, auto, 0);
-    height: 100%;
-    width: 100%;
-  }
-
-  .home-inner {
-    -webkit-transform: translateZ(0);
-    background-image: url('../images/pattern-bg.png');
-    background-position: center center;
-    background-size: cover;
-    display: table;
-    height: 100%;
-    position: relative;
-    transform: translateZ(0);
-    width: 100%;
-    will-change: transform;
-  }
 }
 
 .caption {
@@ -391,13 +372,13 @@ h5 {
     font-size: 20px;
   }
 
-  #map {
+  .contact-info {
+
+    #map {
     background-color: $black;
     height: 500px;
     width: 100%;
   }
-
-  .contact-info {
 
     h6 {
       color: #888787;

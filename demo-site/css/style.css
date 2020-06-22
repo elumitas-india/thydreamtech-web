@@ -118,24 +118,6 @@ h5 {
   position: relative;
   width: 100%;
   z-index: -1; }
-  .landing .home-wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    clip: rect(0, auto, auto, 0);
-    height: 100%;
-    width: 100%; }
-  .landing .home-inner {
-    -webkit-transform: translateZ(0);
-    background-image: url("../images/pattern-bg.png");
-    background-position: center center;
-    background-size: cover;
-    display: table;
-    height: 100%;
-    position: relative;
-    transform: translateZ(0);
-    width: 100%;
-    will-change: transform; }
 
 .caption {
   position: absolute;
@@ -285,7 +267,7 @@ h5 {
     bottom: 15px;
     left: 170px;
     font-size: 20px; }
-  .footer #map {
+  .footer .contact-info #map {
     background-color: #000000;
     height: 500px;
     width: 100%; }
