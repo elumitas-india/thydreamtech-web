@@ -89,6 +89,32 @@ h2 {
   }
 }
 
+h5 {
+  padding: 0;
+  margin: 3rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+
+  &::before,
+  &::after {
+    background-color: $white;
+    display: inline-block;
+    content: '';
+    height: 1px;
+    width: 50px;
+  }
+
+  &::after {
+    margin: 0 0 6px 15px;
+  }
+
+  &::before {
+    margin: 0 15px 6px 0;
+  }
+}
+
+
 /*============= NAVIGATION =============*/
 
 .navbar {
@@ -122,6 +148,7 @@ h2 {
  background: rgba(0, 0, 0, .9)!important;
  transition: background-color 1s ease;
 }
+
 &.solid .navbar-brand {
   transition: all 1s ease;
   img { display: none; }
@@ -223,22 +250,69 @@ h2 {
   }
 }
 
-/*-- Soft logo --*/
-.soft-logo {
-  li {
-    &:not(:last-child) {
-      margin-right: 5rem;
+/*-- Technologies logo --*/
+
+.tech-logo {
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .hexagon {
+    position: relative;
+    width: 80px;
+    height: 46.19px;
+    margin: 23.09px 0;
+    border-left: solid 1px #333333;
+    border-right: solid 1px #333333;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      width: 56.57px;
+      height: 56.57px;
+      -webkit-transform: scaleY(0.5774) rotate(-45deg);
+      -ms-transform: scaleY(0.5774) rotate(-45deg);
+      transform: scaleY(0.5774) rotate(-45deg);
+      background-color: inherit;
+      left: 10.7157px;
     }
 
-    .icons {
-      font-size: 65px;
+    &::before {
+      top: -28.2843px;
+      border-top: solid 1.4142px #333333;
+      border-right: solid 1.4142px #333333;
     }
 
-    sapn {
-      font-size: 15px;
+    &::after {
+      bottom: -28.2843px;
+      border-bottom: solid 1.4142px #333333;
+      border-left: solid 1.4142px #333333;
     }
   }
+
+  &:hover .hexagon {
+    background-color: $white;
+
+    .icons {
+      color: $black;
+    }
+  }
+
+  .icons {
+    @include position(absolute, 50%, null, null, 50%);
+    transform: translate(-50%,-50%);
+    font-size: 50px;
+    z-index: 999;
+  }
+
+  sapn {
+    font-size: 15px;
+  }
 }
+
 
 /*-- Gallery --*/
 .galley {
@@ -324,7 +398,8 @@ h2 {
   }
 
   .contact-info {
-    h5 {
+
+    h6 {
       color: #888787;
 
       &::after {
