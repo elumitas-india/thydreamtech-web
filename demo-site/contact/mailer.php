@@ -1,7 +1,7 @@
 <?php
 
 if($_POST) {
-  $to = "senthil.murugan@thydreamtech.com";
+  $to = "senthil.murugan@elumitas.com";
   $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
   $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
   $subject = filter_var($_POST["subject"], FILTER_SANITIZE_STRING);

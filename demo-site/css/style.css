@@ -64,21 +64,21 @@ h2 {
     h2 {
       font-size: 1.5rem; } }
 
-h5 {
+h3, h5 {
   padding: 0;
   margin: 3rem 0;
   text-align: center;
   text-transform: uppercase;
   width: 100%; }
-  h5::before, h5::after {
+  h3::before, h3::after, h5::before, h5::after {
     background-color: #ffffff;
     display: inline-block;
     content: '';
     height: 1px;
     width: 50px; }
-  h5::after {
+  h3::after, h5::after {
     margin: 0 0 6px 15px; }
-  h5::before {
+  h3::before, h5::before {
     margin: 0 15px 6px 0; }
 
 /*============= NAVIGATION =============*/
