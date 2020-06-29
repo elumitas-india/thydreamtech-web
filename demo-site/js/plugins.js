@@ -34,29 +34,3 @@ $(document).on('click', 'a[href^="#"]', function (event) {
       scrollTop: $($.attr(this, 'href')).offset().top
   }, 300);
 });
-
-/*========== GALLERY CAROUSEL ==========*/
-$(document).ready(function(){
-  $('#team-carousel').owlCarousel({
-      autoplay: true,
-      autoplayHoverPause: false,
-      loop: true,
-      lazyLoad: true,
-      autoplayTimeout: 8000,
-      smartSpeed: 800,
-      dotsSpeed: 700,
-      responsive : {
-          0 : {
-              items: 2
-          },
-
-          768 : {
-              items: 3
-          },
-
-          992 : {
-              items: 4
-          }
-      }
-  });
-});
