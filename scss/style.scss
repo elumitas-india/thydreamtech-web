@@ -294,28 +294,6 @@ h3, h5 {
   }
 }
 
-
-/*-- Gallery --*/
-.galley {
-  padding: 0;
-
-  img {
-    max-width: 100%;
-    filter: gray; /* IE5+ */
-    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
-    -webkit-transition: filter 0.9s ease;
-    -moz-transition: filter 0.9s ease;
-    -ms-transition: filter 0.9s ease;
-    -o-transition: filter 0.9s ease;
-    transition: filter 0.9s ease;
-
-    &:hover {
-      filter: none;
-      -webkit-filter: grayscale(0);
-    }
-  }
-}
-
 /* Team */
 .team {
   padding: 1rem;
@@ -334,10 +312,6 @@ h3, h5 {
 
   img {
     -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
-    -webkit-transition: filter 0.9s ease;
-    -moz-transition: filter 0.9s ease;
-    -ms-transition: filter 0.9s ease;
-    -o-transition: filter 0.9s ease;
     transition: filter 0.9s ease;
   }
 
@@ -384,7 +358,7 @@ h3, h5 {
       color: #888787;
 
       &::after {
-        @include position(absolute, 30px, null, 0, 0);
+        @include position(absolute, 30px, null, 0, 45%);
         content: '';
         width: 40px;
         height: 1px;

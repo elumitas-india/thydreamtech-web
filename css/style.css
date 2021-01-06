@@ -208,24 +208,6 @@ h3, h5 {
   .tech-logo sapn {
     font-size: 15px; }
 
-/*-- Gallery --*/
-.galley {
-  padding: 0; }
-  .galley img {
-    max-width: 100%;
-    filter: gray;
-    /* IE5+ */
-    -webkit-filter: grayscale(1);
-    /* Webkit Nightlies & Chrome Canary */
-    -webkit-transition: filter 0.9s ease;
-    -moz-transition: filter 0.9s ease;
-    -ms-transition: filter 0.9s ease;
-    -o-transition: filter 0.9s ease;
-    transition: filter 0.9s ease; }
-    .galley img:hover {
-      filter: none;
-      -webkit-filter: grayscale(0); }
-
 /* Team */
 .team {
   padding: 1rem;
@@ -241,10 +223,6 @@ h3, h5 {
   .team img {
     -webkit-filter: grayscale(1);
     /* Webkit Nightlies & Chrome Canary */
-    -webkit-transition: filter 0.9s ease;
-    -moz-transition: filter 0.9s ease;
-    -ms-transition: filter 0.9s ease;
-    -o-transition: filter 0.9s ease;
     transition: filter 0.9s ease; }
   .team:hover {
     background-color: #fff; }
@@ -277,7 +255,7 @@ h3, h5 {
       position: absolute;
       top: 30px;
       bottom: 0;
-      left: 0;
+      left: 45%;
       content: '';
       width: 40px;
       height: 1px;
