@@ -301,10 +301,12 @@ h3, h5 {
 
   h4 {
     transition: all .9s ease;
+    text-transform: uppercase;
+
     small {
       display: block;
       font-size: 50%;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       margin-bottom: 15px;
       margin-top: 5px;
     }

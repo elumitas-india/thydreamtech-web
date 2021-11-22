@@ -213,11 +213,12 @@ h3, h5 {
   padding: 1rem;
   transition: all .7s ease; }
   .team h4 {
-    transition: all .9s ease; }
+    transition: all .9s ease;
+    text-transform: uppercase; }
     .team h4 small {
       display: block;
       font-size: 50%;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       margin-bottom: 15px;
       margin-top: 5px; }
   .team img {
