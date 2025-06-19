@@ -25,7 +25,8 @@ a.btn:focus {
 
 /*-- Section --*/
 section {
-  padding: 200px 0;
+  /* padding: 200px 0; */
+  padding: 50px 0;
   position: relative; }
 
 p {
@@ -234,6 +235,11 @@ h3, h5 {
       color: #000000; }
 
 /*============= CONTACT =============*/
+/* If we add a map , we can remove the following padding */
+#contact{
+  padding: 50px 0;
+}
+
 .footer {
   padding: 200px 0 50px; }
   .footer .form-control {
