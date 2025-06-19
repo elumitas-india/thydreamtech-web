@@ -107,8 +107,8 @@ h3, h5 {
       display: none; }
     .navbar.solid .navbar-brand .logo-text {
       display: block; }
-  .navbar .logo-text {
-    display: none; }
+  /* .navbar .logo-text {
+    display: none; } */
 
 /*============= LANDING PAGE =============*/
 /*--- Fixed Landing Page Section --*/
