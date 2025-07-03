@@ -131,7 +131,8 @@ h5::before {
 }
 
 .navbar .navbar-brand img {
-  width: 90px;
+  width: 100%;
+  max-width: 4rem;
 }
 
 .navbar .navbar-nav .nav-item {
@@ -158,14 +159,19 @@ h5::before {
 
 .navbar.solid .navbar-brand img {
   display: none;
+  /* display: block; */
 }
 
 .navbar.solid .navbar-brand .logo-text {
   display: block;
 }
 
-/* .navbar .logo-text {
-    display: none; } */
+.navbar .logo-text {
+  display: none;
+  /* display: none; */
+}
+
+
 
 /*============= LANDING PAGE =============*/
 /*--- Fixed Landing Page Section --*/
