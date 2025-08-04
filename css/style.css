@@ -339,7 +339,14 @@ h5::before {
   /* Webkit Nightlies & Chrome Canary */
   transition: filter 0.9s ease;
   width: 100%;
-  /* max-width: 50%; */
+  max-width: 360px;
+  height: 255px;
+  object-fit: cover;
+
+  @media (max-width: 575.98px) {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .team:hover {
