@@ -340,7 +340,7 @@ h5::before {
   transition: filter 0.9s ease;
   width: 100%;
   max-width: 360px;
-  height: 255px;
+  height: 215px;
   object-fit: cover;
 
   @media (max-width: 575.98px) {
