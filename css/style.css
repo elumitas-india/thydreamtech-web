@@ -362,6 +362,12 @@ h5::before {
   color: #000000;
 }
 
+.team-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
 /*============= CONTACT =============*/
 /* If we add a map , we can remove the following padding */
 #contact {
